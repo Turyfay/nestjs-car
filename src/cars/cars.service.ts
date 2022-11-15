@@ -23,7 +23,8 @@ export class CarsService {
   getAllCars() {
     return this.cars;
   }
-  getCarById(id: string) {
-    return this.cars[id];
+  getCarById(id: number) {
+    const car = this.cars.find((car) => car.id === id);
+    return car;
   }
 }
